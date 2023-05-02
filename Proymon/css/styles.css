@@ -1,0 +1,306 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	text-decoration: none;
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+body{
+	background: rgb(15, 32, 52);
+}
+header{
+    position: sticky;
+    position: -webkit-sticky;
+    top:0px;
+	width: 100%;
+	height: 90px;
+	background-color: white;
+}
+.interior{
+	max-width: 100%;
+	padding: 0 10px;
+	margin: auto;
+    
+}
+.logo{
+	float: left;
+	padding: 5px 20px 0;
+}
+.logo img{
+	height: 80px;
+}
+.logo img:hover{
+	transform: scale(1.1);
+}
+.navegacion{
+	float: right;
+	display: flex;
+	align-items: center;
+	min-height: 90px;
+	z-index: 1000;
+    
+}
+.navegacion ul{
+	list-style: none;
+	padding: 0 10px;
+    
+}
+.navegacion ul li{
+	display: inline-block;
+	position: relative;
+	transition: .3s linear;
+	z-index: 1000;
+    
+}
+.navegacion ul li:hover{
+	transform: scale(1.1);
+}
+.navegacion ul li a{
+	color: black;
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 18px;
+	font-weight: bold;
+	padding: 12px 20px;
+	transition: .3s linear;
+}
+.navegacion ul li a:hover{
+	color: rgb(37, 79, 128);
+	transform: scale(1.1);
+}
+.navegacion ul li:hover .hijos{
+	display: block;
+}
+.navegacion .submenu .hijos{
+	display: none;
+	background: #c4d1f8;
+	position: absolute;
+	width: 100%;
+   
+}
+.navegacion .submenu .hijos li{
+	display: block;
+	overflow: hidden;
+	border-bottom: none;
+  
+}
+.navegacion .submenu .hijos li a{
+	display: block;
+    font-size: 11px;
+}
+.menu-fijo{
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+}
+#estatico{
+    position: static;
+    background-color: blue;
+    width: 100%;
+    height: 4000px;
+}
+.slider{
+    
+    width: 50%;
+    overflow: hidden;
+    height: 500px;
+}
+.slider ul{
+    display: flex;
+    animation: cambio 15s infinite alternate linear;
+    width: 400%;
+}
+.slider li{
+    width: 100%;
+    list-style: none;
+}
+.slider img{
+    width: 100%;
+    height: 100%;
+}
+@keyframes cambio{
+    0%{margin-left: 0;}
+    20%{margin-left: 0;}
+
+    25%{margin-left: -50%}
+    45%{margin-left:-50%}
+
+    50%{margin-left: -100%}
+    70%{margin-left: -100%}
+
+    75%{margin-left:-150%}
+    100%{margin-left:-150%}
+    }
+	#fijo{
+		position: fixed;
+		right: 50px;
+		bottom: 50px;
+		height: 35px;
+		border-radius: 50%;
+	}
+
+	.overlay{
+		top: 0;
+		bottom: 0;
+		right: 0;
+		left: 0;
+		background: rgba(0, 0, 0, 0.3);
+		position: fixed;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		visibility: hidden;
+	}
+	.overlay.active{
+		visibility: visible;
+	}
+	.popup{
+		background: white;
+		box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
+		border-radius: 3px;
+		font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+		padding: 20px;
+		text-align: center;
+		width: 500px;
+		transition: .3s ease all;
+		transform: scale(0.7);
+
+	}
+
+	.popup .btn-cerrar-popup{
+		font-size: 16px;
+		line-height: 16px;
+		display: block;
+		text-align: right;
+		color: #BBBBBB;
+		transition: .3s ease all;
+	}
+
+	.popup .btn-cerrar-popup:hover{
+		color: black;
+
+	}
+
+	.popup h2{
+		font-size: 36px;
+		font-weight: 600;
+		margin-bottom: 10px;
+		opacity: 0;
+
+	}
+	.popup h3{
+		font-size: 36px;
+		font-weight: 600;
+		margin-bottom: 10px;
+		opacity: 0;
+
+	}
+	.btn-abrir-popup :hover{
+		cursor: pointer;
+	}
+	.popup.overlay.active{opacity: 1; transform: scale(1);}
+	.popup.active h2 { animation: entradaTitulo .8s ease .5s forwards; }
+	.popup.active h3 { animation: entradaTitulo .8s ease .5s forwards; }
+   
+	@keyframes entradaTitulo {
+		from {
+			opacity: 0;
+			transform: translateY(-25px);
+		}
+	
+		to {
+			transform: translateY(0);
+			opacity: 1;
+		}
+	}
+  
+    /* Servicios y rep*/
+    .box:before, .box:after {
+        display: table;
+        content: "";
+        line-height: 0;
+      }
+      .box:after {
+        clear: both;
+      }
+      .box_aside {
+        float: left;
+      }
+      .box_cnt__no-flow {
+        overflow: hidden;
+      }
+      .product-list li .box:hover .icon {
+        background: #57aacd;
+      }
+      .product-list li .box_cnt__no-flow {
+        padding-left: 30px;
+      }
+      .product-list * + hr {
+        margin-top: 50px;
+      }
+      .product-list hr + * {
+        margin-top: 50px;
+      }
+      .product-list h3 + p {
+        margin-top: 6px;
+      }
+      @media (max-width: 767px) {
+        .product-list hr {
+          display: none;
+        }
+        .product-list hr + * {
+          margin-top: 30px;
+        }
+        .product-list li .box {
+          text-align: center;
+        }
+        .product-list li .box_aside {
+          float: none;
+        }
+        .product-list li .box_aside .icon {
+          display: inline-block;
+        }
+        .product-list li .box_cnt__no-flow {
+          margin-top: 20px;
+          padding-left: 0;
+        }
+      }
+      .container, .container-fluid {
+        margin-right: auto;
+        margin-left: auto;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+      }
+      .container-fluid [class*="grid_"] {
+        float: left;
+        width: 8.33333%;
+        min-height: 1px;
+      }
+      .container-fluid .grid_6 {
+        width: 50%;
+      }
+      .container-fluid .preffix_6 {
+        margin-left: 420px;
+      }
+      .container .row {
+        margin-left: -30px;
+      }
+      .container [class*="grid_"] {
+        float: left;
+        min-height: 1px;
+        margin-left: 30px;
+      }
+      .container .grid_6 {
+        width: 570px;
+      }
+      .container .preffix_6 {
+        margin-left: 630px;
+      }
+      @media (min-width: 980px) and (max-width: 1199px) {
+        .container, .container-fluid {
+          width: 940px;
+        }
+     }    
+  
+     /* termino servicios*/
