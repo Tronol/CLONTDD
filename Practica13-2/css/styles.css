@@ -1,0 +1,28 @@
+.galeria{
+    display: flex;
+    height: 20rem;
+    gap: 1rem
+}
+.galeria div{
+    flex: 1;
+    border-radius: 1rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    transition: all .8s cubic-bezier(.25, .4, .45, 1.4);
+
+}
+.galeria > div:hover { 
+    flex: 3; 
+} 
+
+.imagenes{
+    background-image: url(https://images.unsplash.com/photo-1682258687337-9d2ca99054cd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80);
+}
+button{
+    background-color: rgb(255, 81, 0);
+    transition: background-color 1s;
+}
+button:hover{
+    background-color: rgb(22, 206, 197);
+}
